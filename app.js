@@ -7,6 +7,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+var methodOverride = require('method-override')
 const ngrok = require('ngrok');
 
 // hosting at ngrok
@@ -14,6 +15,9 @@ const ngrok = require('ngrok');
     const url = await ngrok.connect();
     console.log('hosted at url : ',url);
   })();
+
+//middleware for method override
+app.use(methodOverride('_method'));
 
 //Requiring user and admin route
 const adminRoutes = require('./routes/admin');
