@@ -1,0 +1,72 @@
+<%- include('../partials/header') -%>
+
+<div class="col-9">
+    <div class="container p-3 w-100">
+        <h1 class="mt-5 mb-4">Add New Product</h1>
+    <%- include('../partials/messages') -%>
+        <form class="mt-2" id="newpostform" action="/product/new" method="GET">
+
+            <div class="row mt-5 justify-content-center d-flex">
+                <div class="col-12">
+                    <input type="text" class="form-control" name="search" placeholder="Enter Product URL" required>
+                </div>
+            </div>
+
+            <div class="justify-content-center d-flex mt-4">
+                <button id="fetchBtn" class="btn btn-danger w-25 py-2">Try Scrapping Data</button>
+            </div>
+        </form>
+
+        <form class="mt-2" action="/product/new" method="POST">
+            <div class="row mt-5 justify-content-center d-flex">
+                <div class="col-9 mt-4">
+                    <label for="prod-url">Product URL</label>
+                    <input id ="prod-url" type="text" class="form-control" name="url" 
+                        value="<%=productData.productUrl%>" required>
+                </div>
+
+                <div class="col-9 mt-4">
+                    <label for="prod-title">Product Title</label>
+                    <input id ="prod-title" type="text" class="form-control" name="title" 
+                        value="<%=productData.title%>" required>
+                </div>
+
+                <div class="col-9 mt-4">
+                    <label for="prod-price">Product Price (in Rs)</label>
+                    <input  id="prod-price" type="text" class="form-control" name="price" 
+                        value="<%=productData.price%>" required>
+                </div>
+
+                <div class="col-9 mt-4 ml-5">
+                    <input class="form-check-input scale " type="checkbox" id="prod-stock" name="stock" 
+                        value="In stock" 
+                        <% if(productData.stock=='In stock'){ %>
+                        checked
+                        <% } %>
+                    >
+                    <label class="form-check-label" for="prod-stock">In-Stock</label>
+                </div>
+
+                <div class="col-9 mt-4">
+                    <label for="prod-comp">Company name</label>
+                    <input id ="prod-comp" type="text" name="company" class="form-control" 
+                        value="<%=productData.company%>" required>
+                </div>
+
+                <div class="col-9 mt-4">
+                    <label for="prod-name">Enter Product Name</label>
+                    <input id ="prod-name" type="text" class="form-control" name="sku" placeholder="nick-name" required>
+                </div>
+
+            </div>
+
+            <div class="justify-content-center d-flex mt-4">
+                <button id="publishBtn" class="btn btn-danger w-25 py-2">Save Data</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+</div>
+
+<%- include('../partials/footer') -%>
