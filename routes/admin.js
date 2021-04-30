@@ -120,7 +120,7 @@ async function scrapeData_flipkart(url, page) {
         
         let price = $(".CEmiEU ._30jeq3").length?$(".CEmiEU ._30jeq3").text().trim():'0';
         price=price.replace(',','').replace(',','');
-        let stock = ($("._16FRp0").length || $("_1dVbu9").length) ?"Out of stock":"In stock";
+        let stock = ($("._16FRp0").length || $("._1dVbu9").length) ?"Out of stock":"In stock";
 
         return {
             title,
