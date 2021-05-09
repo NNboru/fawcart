@@ -2,6 +2,7 @@
 
 The main objective of this application is to provide a common cart for different shopping websites like [Flipkart](https://www.flipkart.com), [Amazon](https://www.amazon.in), [Wallmart](https://www.walmart.com/) etc.
 
+<p  align="center"><img src="/ss.png" alt="dashboard"></p>
 
 ## Setup/Install
 1. __Fork__ - fork to create a copy of this repo to your own account. (skip fork, if you don't intent to contribute)
