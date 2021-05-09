@@ -2,7 +2,8 @@
 
 The main objective of this application is to provide a common cart for different shopping websites like [Flipkart](https://www.flipkart.com), [Amazon](https://www.amazon.in), [Wallmart](https://www.walmart.com/) etc.
 
-<p  align="center"><img src="/ss.png" alt="dashboard"></p>
+<p title="dashboard" align="center"><img src="/ss.png"></p>
+<br />
 
 ## Setup/Install
 1. __Fork__ - fork to create a copy of this repo to your own account. (skip fork, if you don't intent to contribute)
@@ -41,7 +42,7 @@ One click on the "update" button and the app visits all the product's url, scrap
 - [connect-flash](https://github.com/jaredhanson/connect-flash)
 
 
-## future work
+## Future work
 - Extending Web-scraping feature for all shoping websites. For now it only works for amazon & flipkart.
 - Adding authentication, login/signup functionality.
 - Adding more products-caparision techniques.
